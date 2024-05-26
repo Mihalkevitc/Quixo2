@@ -1,0 +1,387 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2; /* Цвет фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Занимает всю высоту экрана */
+}
+
+/* Стилизация ползунка */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(13, 193, 252); /* Цвет ползунка */
+}
+
+/* Стилизация полосы прокрутки */
+::-webkit-scrollbar {
+    width: 1rem; /* Ширина полосы прокрутки */
+    background-color: transparent; /* Прозрачный фон */
+}
+
+#head {
+    position: absolute;
+    display: block;
+    top: -2rem;
+    font-size: 4rem;
+    left: 10rem;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#authors{
+    content:"";
+    display:block;
+    position:absolute;
+    bottom:-0.3rem;
+    right:3rem;
+    width:25rem;
+    height:2rem;
+
+    font-size:20px;
+    text-align:right;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cont-stripes {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  top: 0;
+  right: 13%;
+  width: 12.5rem;
+  height: 5.5rem;
+}
+
+.stripes {
+  display: block;
+  content: "";
+  position: relative;
+  top: -2px;
+  left: 0;
+  width: 10px;
+  height: 100%; /* Высота полоски */
+  background-color: #000; /* Цвет полоски */
+  border-radius: 5px;
+}
+
+#red_stripes{
+    background-color:rgb(201,104,113); /* Цвет полоски */
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 400px; /* Ширина контейнера */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Скругление углов */
+    background-color: #fff; /* Цвет фона формы */
+    margin-top: 1rem;
+}
+
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 330px solid transparent; /* увеличиваем в два раза */
+    border-right: 330px solid transparent; /* увеличиваем в два раза */
+    border-bottom: 500px solid rgb(228, 88, 101); /* увеличиваем в два раза */
+    z-index: -1;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+
+    }
+}
+
+.x-icon {
+    position: absolute;
+    top: 20%; /* Выберите желаемое значение для расположения сверху */
+    left: 20%; /* Выберите желаемое значение для расположения слева */
+    font-size: 800%; /* Размер значка X */
+    font-weight: bold;
+    animation: bounce 2s infinite;
+}
+
+.o-icon {
+    position: absolute;
+    bottom: 7%; /* Выберите желаемое значение для расположения снизу */
+    right: 15%; /* Выберите желаемое значение для расположения справа */
+    font-size: 890%; /* Размер значка O */
+    font-weight: bold;
+    animation: bounce  2s 1s infinite;
+}
+
+
+
+#blue {
+    position: absolute;
+    border-radius: 50%; /* Делаем круги */
+    background-color: rgb(13, 193, 252);
+    width: 3rem; /* Размер круга */
+    height: 3rem; /* Размер круга */
+     top: 85%; /* Положение первого круга */
+    left: 9%; /* Положение первого круга */
+}
+
+#blue2 {
+    position: absolute;
+    border-radius: 50%; /* Делаем круги */
+    background-color: rgb(13, 193, 252);
+    width: 3rem; /* Размер круга */
+    height: 3rem; /* Размер круга */
+    top: 27%; /* Положение первого круга */
+    right: 12%; /* Положение первого круга */
+}
+
+#red {
+    position: absolute;
+    border-radius: 50%; /* Делаем круги */
+    background-color: rgb(201,104,113);
+    width: 10rem; /* Размер круга */
+    height: 10rem; /* Размер круга */
+    top: 10%; /* Положение первого круга */
+    left: -3%; /* Положение первого круга */
+}
+
+#in_red {
+    position: absolute;
+    border-radius: 50%; /* Делаем круги */
+    background-color: #f2f2f2;
+    width: 10rem; /* Размер круга */
+    height: 10rem; /* Размер круга */
+    top: 10%; /* Положение первого круга */
+    left: -3%; /* Положение первого круга */
+    transform: scale(0.8)
+}
+
+.triangle
+{
+    position: absolute;
+    width: 0;
+    top: 65%;
+    left: 17%;
+    height: 0;
+    border-left: 3.3rem solid transparent; /* Левая сторона */
+    border-right: 3.3rem solid transparent; /* Правая сторона */
+    border-bottom: 4.7rem solid rgb(184,44,213); /* Нижняя сторона */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg);
+}
+
+.triangle2
+{
+    position: absolute;
+    width: 0;
+    top: 64.3%;
+    left: 16.75%;
+    height: 0;
+    border-left: 3.5rem solid transparent; /* Левая сторона */
+    border-right: 3.5rem solid transparent; /* Правая сторона */
+    border-bottom: 4.9rem solid  #f2f2f2; /* Нижняя сторона */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg) scale(0.6);
+}
+
+h2 {
+    text-align: center;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Скругление углов */
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Плавное изменение цвета при фокусе */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: rgb(5, 191, 248); /* Цвет при фокусе */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(102, 0, 255); /* Цвет кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(87, 0, 223); /* Цвет кнопки при наведении */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*
+-----------------------------------------------------------*/
+
+
+/* Стили для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2; /* Цвет фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:85vw;
+    height: 100vh; /* Занимает всю высоту экрана */
+    }
+
+    .cont-stripes
+    {
+        display: none; /* Убираем полоски на мобильных устройствах */
+    }
+
+    #head {
+        display:block;
+        position:absolute;
+        background-color: rgb(228, 88, 101);
+        left:0;
+        width:95%;
+        padding: 1rem;
+        font-size: 3rem; /* Уменьшаем размер заголовка */
+        text-align: center; /* Центрируем текст заголовка */
+        top: -2.5rem;
+        border-radius:15px;
+        color: white;
+    }
+
+    #authors{
+        left:-2rem;
+    }
+
+    .container {
+        top:1rem;
+        left: 1rem;
+        width: 15rem;
+        margin: 0 auto; /* Центрируем контейнер */
+        margin-top: 2rem; /* Увеличиваем отступ сверху */
+    }
+
+    .container::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent; /* увеличиваем в два раза */
+    border-right: 150px solid transparent; /* увеличиваем в два раза */
+    border-bottom: 500px solid rgb(228, 88, 101); /* увеличиваем в два раза */
+    z-index: -1;
+}
+
+    .x-icon,
+    .o-icon {
+        font-size: 7.5rem; /* Уменьшаем размер значков X и O */
+    }
+
+    .o-icon{
+        font-size: 10rem;
+    }
+
+    .x-icon{
+        left:1rem;
+        z-index:5;
+    }
+
+    .form-group {
+        margin-bottom: 1rem; /* Уменьшаем отступ между полями формы */
+    }
+
+    #red,
+    #in_red{
+        top:8rem;
+        left -1rem;
+    }
+    #red{
+        width:9rem;
+        height:9rem;
+    }
+
+    #in_red{
+        width:9rem;
+        height:9rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: calc(100% - 2rem); /* Растягиваем поля формы на всю ширину с учетом внешних отступов */
+        margin: 0.5rem; /* Добавляем внешние отступы для полей формы */
+    }
+
+    .triangle,
+    .triangle2 {
+        display: none; /* Убираем треугольники на мобильных устройствах */
+    }
+
+    #blue{
+        width:3rem;
+        height:3rem;
+    }
+
+    #blue2{
+        width:3rem;
+        height:3rem;
+    }
+
+    .cont-stripes {
+        display:flex;
+        width:10rem;
+        height: 5rem;
+        top:5rem;
+        right:3rem;
+    }
+
+    /* Стилизация полосы прокрутки */
+::-webkit-scrollbar {
+    width: 0rem; /* Ширина полосы прокрутки */
+    background-color: transparent; /* Прозрачный фон */
+}
+}
