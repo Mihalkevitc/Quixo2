@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/register.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <title>Регистрация</title>
+</head>
+<body>
+        <div class="cont-stripes">
+            <div class="stripes"></div>
+            <div class="stripes"></div>
+            <div class="stripes" id="red_stripes"></div>
+            <div class="stripes"></div>
+            <div class="stripes"></div>
+            <div class="stripes"></div>
+            <div class="stripes"></div>
+            <div class="stripes"></div>
+        </div>
+        <div class="x-icon">X</div>
+        <div class="circle" id="blue"></div>
+        <div class="circle" id="blue2"></div>
+        <div class="circle" id="red"></div>
+        <div class="circle" id="in_red"></div>
+
+        <h2 id="head">Tic-Tac-Toe</h2>
+        <h3 id="authors">By Yakovleva and Mihalkevitc</h3>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+        <!-- Кнопка для перенаправления на страницу логина -->
+        <a href="{{ url_for('login') }}">Уже есть аккаунт? Войти</a>
+    </div>
+        <div class="triangle"></div>
+        <div class="triangle2"></div>
+        <div class="o-icon">O</div>
+</body>
+</html>
